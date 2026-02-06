@@ -1,0 +1,34 @@
+1. Sélection de la zone géographique
+
+L'installateur te demande ton pays pour régler les serveurs de mise à jour les plus proches.
+Si tu ne vois pas la France, descends tout en bas sur "other", puis choisis "Europe", et enfin "France".
+Cela permettra à ton NAS d'être à l'heure et de télécharger ses composants rapidement.
+
+2. Le moment crucial : Le choix du disque
+
+Fais bien attention à cette étape qui va arriver bientôt :
+L'installateur va te demander sur quel disque installer le système.
+Choisis le disque de 20 Go (celui que nous avons créé sur ton SSD Intenso).
+Ne choisis surtout pas le gros disque (800 Go / 1 To). On veut garder ce gros disque totalement vide pour tes films et tes fichiers, pas pour le système d'exploitation.
+
+3. Petit rappel de tes accès
+
+Pendant l'installation, il va te demander :
+Un nom de machine : Tu peux mettre nas-intenso.
+Un mot de passe "root" : C'est le mot de passe administrateur pour le terminal. Note-le bien.
+
+4. Rappel du Hostname Proxmox
+
+Pour répondre à ta question de tout à l'heure, ton serveur principal s'appelle toujours pve-intenso.home.lan. C'est important si tu veux créer des liens entre ton NAS et ton Proxmox plus tard.
+Une fois l'installation terminée :
+Le PC va redémarrer. Tu pourras alors délaisser la console Proxmox et tout gérer depuis ton navigateur Windows :
+Tape l'IP de la VM (elle sera affichée sur la console au reboot).
+
+User : admin
+Password : openmediavault
+
+2. Accéder aux dossiers (Explorateur de fichiers)
+C'est ainsi que tu utiliseras ton disque de 1 To comme un disque dur externe branché à ton réseau.
+Ouvre l'Explorateur de fichiers Windows.
+Dans la barre d'adresse en haut, tape : \\IP_DE_TA_VM_NAS (par exemple \\192.168.10.100).
+Attention : Pour que cela fonctionne, tu dois d'abord activer le service SMB/CIFS dans l'interface Web d'OpenMediaVault
