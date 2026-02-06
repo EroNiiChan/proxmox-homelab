@@ -1,5 +1,13 @@
--Sur une instance Ubuntu:
+-Sur une nouvelle instance Ubuntu:
+sudo apt update && sudo apt install curl -y
+- Installation de docker
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+- Pour te faciliter la vie, ou "$USER" est ton identifiant
+sudo usermod -aG docker $USER
+newgrp docker #pour valider
+docker ps # pour verifier si docker est bien installer
 -Une fois Docker installer paramettrer un docker avec portainer
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 - Et t'y a acces sur https://l'IP DE TON CHOIX:9443
+- Creation de mdp de au moins 12 caractere avec ton identifiant
+- Choisis Docker Standalone puis la méthode Socket
