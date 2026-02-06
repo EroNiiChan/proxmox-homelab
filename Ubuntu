@@ -1,0 +1,9 @@
+- On charge dans le gestionnaire proxmox l'iso de Ubuntu dans mon cas "ubuntu-25.10-live-server-amd64.iso"
+- Au niveau du paramettrage Network:
+  - Subnet:ton address minimal avec le nombre de byte sur lequel est codder ton address dans la plus part des cas /24
+  - Addrress:
+  - Gateway: L'address de ta Box
+  - Name servers: Un server DNS stable soit ton adguard parametrer plus tot ou le DNS Google (8.8.8.8), Cloudflare (1.1.1.1)
+  - Search Domain: Ton nom de domaine dans mon cas pour ce projet"pve-intenso.thecluster.fr
+- Autoriser l'installation de support SSH
+- Choix du disque ou tu vas installer l'os
